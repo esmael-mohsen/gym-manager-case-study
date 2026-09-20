@@ -1,0 +1,6 @@
+flowchart LR
+USER[Signed-in Staff] --> OP[Protected Operation]
+OP --> POLICY[Permission / Session Check]
+POLICY -->|Allowed| TX[Transactional Business Action]
+POLICY -->|Approval required| APPROVAL[Approval] --> TX
+TX --> AUDIT[Audit Record]

@@ -1,0 +1,6 @@
+flowchart LR
+PLAN[Membership Plan] --> CONTRACT[Contract Snapshot]
+CONTRACT --> CHARGE[Receivable / Charge]
+PAYMENT[Payment] --> ALLOC[Payment Allocation]
+CHARGE --> ALLOC
+ALLOC --> BAL[Outstanding Balance]

@@ -1,0 +1,7 @@
+flowchart TB
+START[Application Start] --> PATHS[Resolve Installation Paths]
+PATHS --> LOCK[Process / Instance Checks]
+LOCK --> SCHEMA[Schema Compatibility]
+SCHEMA --> RECOVERY[Recovery / Restore State]
+RECOVERY --> CONTEXT[Build Application Context]
+CONTEXT --> READY[Normal Operation]

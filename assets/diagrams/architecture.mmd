@@ -1,0 +1,15 @@
+flowchart TB
+UI[Flutter Windows UI]
+STATE[BLoC / Cubit + Controllers]
+APP[Application Services / Use Cases]
+DOMAIN[Domain Models + Business Rules]
+REPO[Repository Interfaces]
+DB[Drift / SQLite Local Authority]
+UI --> STATE
+STATE --> APP
+APP --> DOMAIN
+APP --> REPO
+REPO --> DB
+APP --> SEC[Session / Permission / Approval Policies]
+APP --> REC[Backup / Recovery / Startup Coordination]
+APP --> OPTIONAL[Optional External Adapters]
